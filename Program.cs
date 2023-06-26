@@ -1,4 +1,4 @@
-//test 2
+//test 3
 Console.Write("Enter Maximum degree : ");
 double MaximumDegree = Convert.ToDouble(Console.ReadLine());
 Console.Write("Enter The Number Of Students : ");
