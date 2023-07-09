@@ -4,6 +4,7 @@ public class Student
     public double degree;
     public DateTime birthdate;
     private decimal age;
+    public int Rank;
     public decimal Age
     {
         get

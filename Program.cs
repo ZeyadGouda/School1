@@ -1,3 +1,4 @@
+Console.WriteLine("Enter Maximum Degree : ");
 double MaximumDegree = Convert.ToDouble(Console.ReadLine());
 Console.Write("Enter The Number Of Students : ");
 int NumberOfStudents = Convert.ToInt32(Console.ReadLine()); ;
@@ -21,18 +22,20 @@ while (num <= NumberOfStudents)
     {
         Console.WriteLine("ERROR");
     }
-        if
-            (ObjectStudent.degree > MaximumDegree || ObjectStudent.degree < 0)
-        {
-            Console.WriteLine("Wrong input");
-        }
-        
-        MySchool.Students.Add(ObjectStudent);
+    if
+        (ObjectStudent.degree > MaximumDegree || ObjectStudent.degree < 0)
+    {
+        Console.WriteLine("Wrong input");
+    }
 
-        num++;
- 
+    MySchool.Students.Add(ObjectStudent);
 
-        Console.WriteLine($"Name: {ObjectStudent.Name}, Birthdate: {ObjectStudent.birthdate}, Degree: {ObjectStudent.degree}, Age: {ObjectStudent.Age}");
+    MySchool.UpdateRanks(ObjectStudent);
+
+    num++;
+
+
+    Console.WriteLine($"Name: {ObjectStudent.Name}, Birthdate: {ObjectStudent.birthdate}, Degree: {ObjectStudent.degree}, Age: {ObjectStudent.Age}");
     string searchName;
     while (true)
     {
@@ -47,7 +50,7 @@ while (num <= NumberOfStudents)
         foreach (Student student in MySchool.Students)
         {
             if (student.Name == searchName)
-                {
+            {
                 foundStudent = true;
                 Console.WriteLine($"Name: {ObjectStudent.Name}, Birthdate: {ObjectStudent.birthdate}, Degree: {ObjectStudent.degree}, Age: {ObjectStudent.Age}");
             }
