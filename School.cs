@@ -23,9 +23,10 @@ public class School
         if (StudentsSortedByRank.Count == 0)
         {
             ObjectStudent.Rank = 1;
+            StudentsSortedByRank.Add(ObjectStudent);
             return;
         }
-        int x = 1;
+        int x = 0;
        // int y = StudentsSortedByRank.Count;
         foreach (Student s in StudentsSortedByRank)
         {

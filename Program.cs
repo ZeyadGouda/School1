@@ -35,7 +35,7 @@ while (num <= NumberOfStudents)
     num++;
 
 
-    Console.WriteLine($"Name: {ObjectStudent.Name}, Birthdate: {ObjectStudent.birthdate}, Degree: {ObjectStudent.degree}, Age: {ObjectStudent.Age}");
+    Console.WriteLine($"Name: {ObjectStudent.Name}, Birthdate: {ObjectStudent.birthdate}, Degree: {ObjectStudent.degree}, Age: {ObjectStudent.Age}, Rank : {ObjectStudent.Rank}");
     string searchName;
     while (true)
     {
@@ -61,7 +61,7 @@ while (num <= NumberOfStudents)
         }
     }
 }
-foreach (Student student in MySchool.Students)
+foreach (Student student in MySchool.StudentsSortedByRank)
 {
     Console.WriteLine($"Name: {student.Name}, Birthdate: {student.birthdate}, Degree: {student.degree}, Age: {student.Age}");
 }
